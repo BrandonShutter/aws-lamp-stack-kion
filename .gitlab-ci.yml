@@ -1,0 +1,14 @@
+include:
+  local: .gitlab/Terraform-Module-Upload.gitlab-ci.yml
+
+stages:
+  - upload
+
+upload:
+  extends: .terraform_module_upload
+  variables:
+    TERRAFORM_MODULE_NAME: aws-lamp-install
+    TERRAFORM_MODULE_SYSTEM: local
+  stage: upload
+  rules:
+    - if: $CI_COMMIT_TAG
