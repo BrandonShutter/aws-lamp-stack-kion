@@ -4,5 +4,5 @@ This would be a module that we could call in another terraform project. The incl
 
 module "my_module_name" {
 source = "gitlab.com/shutter-sites/aws-lamp-install/local"
-version = "0.0.1"
+version = "0.0.2"
 }
